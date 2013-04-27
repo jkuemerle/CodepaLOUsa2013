@@ -1,3 +1,6 @@
 [submodule "Lions and Tigers and Pig Ohh My A Coder’s Introduction to Big Data - Code"]
 	path = Lions and Tigers and Pig Ohh My A Coder’s Introduction to Big Data - Code
 	url = https://github.com/wesreisz/lionsAndTigersAndPigOhhMy.git
+[submodule "Rich UI Web Development With Knockout And Coffeescript - Code"]
+	path = Rich UI Web Development With Knockout And Coffeescript - Code
+	url = https://github.com/amirci/knockout_coffee_demo.git
