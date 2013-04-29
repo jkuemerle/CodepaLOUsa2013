@@ -20,6 +20,13 @@ Follow me on Twitter at: [@EdCharbeneau](https://twitter.com/edcharbeneau)
 - [Responsive Design using Foundation with ASP.NET MVC](https://www.simple-talk.com/dotnet/asp.net/responsive-design-using-foundation-with-asp.net-mvc/)
 - [A foundation for the web](https://www.simple-talk.com/dotnet/asp.net/a-foundation-for-the-web/)
 
+##Tools
+
+- [Prototyping MVC](http://www.responsivemvc.net/Prototyping) Lorem ipsump tool for .Net Users
+- [InlineIpsum](https://github.com/EdCharbeneau/InlineIpsum) Lorem ipsum tool for jQuery users
+- [Foundation](http://www.responsivemvc.net/Foundation) (MVC nuget)
+- [Foundation](http://foundation.zurb.com) (everything else)
+
 ##Code Examples
 - [https://github.com/EdCharbeneau/ExploringPrototypesWithGit](https://github.com/EdCharbeneau/ExploringPrototypesWithGit)
 - [https://github.com/EdCharbeneau/RapidPrototypingMVC4Examples](https://github.com/EdCharbeneau/RapidPrototypingMVC4Examples)
