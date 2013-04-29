@@ -1,0 +1,1 @@
+[Blog post](http://mitchelsellers.com/blogs/2013/04/27/code-palousa-2013-presentation-materials.aspx) with attendee survey. Slides are embedded in the post. Posted from the #CodepaLOUsa Twitter feed.
