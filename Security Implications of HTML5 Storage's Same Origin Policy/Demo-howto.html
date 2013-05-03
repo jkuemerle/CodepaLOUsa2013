@@ -1,0 +1,47 @@
+<html>
+<h3>Instructions on how to set up Tomcat to run this demonstration</h3>
+<p>
+Once set up, the following steps will demonstrate issues with local storage when multiple applications share the same origin.  It will show possible issues when cookie based SSO applications have different origins (hostnames).  It will finally show how to make those SSO applications interoperate by setting a common domain for the SSO cookie.
+</p>
+<OL>
+<LI>Get tomcat from Apache at <a href="http://tomcat.apache.org/index.html">http://tomcat.apache.org/index.html</a></LI>
+
+<LI>After installing Tomcat, install the following directories as applications with contexts named the same as the directories: nottingham, portal, portal2, robinhood, secured1, secured2</LI>
+
+<LI>Add the entries in the <a href="./hosts">hosts</a> file to the hosts file in your system.  A complete list of the location of the hosts file on various systems may be found <a href="http://en.wikipedia.org/wiki/Hosts_file">here</a>.</LI>
+
+<LI>Make backup copies of TOMCAT_HOME/conf server.xml and tomcat-users.xml.  Copy these files from <a href="Tomcat/conf">here</a> to your TOMCAT_HOME/conf.
+</LI>
+
+<LI>Demo 1: open the following in separate browser tabs:
+<UL>
+<LI><a href="http://robinhood.com:8080/robinhood" target="robinhood">http://robinhood.com:8080/robinhood</a></LI>
+<LI><a href="http://nottingham.com:8080/nottingham" target="nottingham">http://nottingham.com:8080/nottingham</a></LI>
+</UL>Actions in the nottingham page will have no effect on the robinhood page.</LI>
+
+<LI>Demo 2: open the following in separate browser tabs:
+<UL>
+<LI><a href="http://myappserver.mydomain.com:8080/robinhood" target="robinhood">http://myappserver.mydomain.com:8080/robinhood</a></LI>
+<LI><a href="http://myappserver.mydomain.com:8080/nottingham/" target="nottingham">http://myappserver.mydomain.com:8080/nottingham/</a></LI>
+<LI><a href="http://myappserver.mydomain.com:8080/portal" target="nottingham">http://myappserver.mydomain.com:8080/portal</a> User name and password: <tt>tomcat</tt></LI></UL>Actions in nottingham page may affect the robinhood page.  The SSO between the portal and protected applications will work.</LI>
+
+<LI>Demo 3: open the following in separate browser tabs:
+<UL>
+<LI><a href="http://robinhood.myappserver.mydomain.com:8080/robinhood/" target="robinhood">http://robinhood.myappserver.mydomain.com:8080/robinhood</a></LI>
+<LI><a href="http://nottingham.myappserver.mydomain.com:8080/nottingham" target="nottingham">http://nottingham.myappserver.mydomain.com:8080/nottingham</a></LI>
+<LI><a href="http://portal.myappserver.mydomain.com:8080/portal2" target="nottingham">http://portal.myappserver.mydomain.com:8080/portal2</a> User name and password: <tt>tomcat</tt></LI></UL>
+Demo 3: Actions in nottingham page do not effect robinhood tab.  The SSO between the portal and protected applications will be broken.</LI>
+
+<LI>Demo 3: open the following in separate browser tabs:
+<UL>
+<LI><a href="http://portal.fixedappserver.mydomain.com:8080/portal3" target="nottingham">http://portal.fixedappserver.mydomain.com:8080/portal3</a> User name and password: <tt>tomcat</tt></LI>
+<LI><a href="http://robinhood.fixedappserver.mydomain.com:8080/robinhood/" target="robinhood">http://robinhood.fixedappserver.mydomain.com:8080/robinhood</a></LI>
+<LI><a href="http://nottingham.fixedappserver.mydomain.com:8080/nottingham" target="nottingham">http://nottingham.fixedappserver.mydomain.com:8080/nottingham</a></LI>
+</UL>
+Demo 3: Actions in nottingham page do not effect robinhood tab.  The SSO between the portal and protected applications will work correctly.  All is well.  Yay!</LI>
+</OL>
+<p>
+Disclaimer: These demonstrations show the effect that changes in an origin can have on the security of local storage and Single Sign On.  They do not show overall good security practice.
+</p>
+<h6>Tomcat version used for this demo: 7.0.37</h6>
+</html>

@@ -1,0 +1,17 @@
+
+<script type="text/javascript">
+    function bindNameAndContinue() {
+        localStorage[localStorage.nameBinding] = window.document.getElementById("name").value;
+        window.document.location = localStorage.resultPage;
+    }
+</script>
+
+<html>
+<title>Robinhood</title>
+<h1>Welcome to the Robinhood application</h1>
+<form action="javascript:void(0)" onsubmit="bindNameAndContinue()">
+
+    Whom shall we save: <input id="name" type="text" name="name" maxlength="40" size="41"/><br/>
+    <input type="submit" name="Save Em!"/>
+
+</form>
